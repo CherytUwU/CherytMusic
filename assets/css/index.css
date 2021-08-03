@@ -1,0 +1,1198 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* BLACK AND WHITE */
+/* COLORS */
+/* SOCIAL NETS COLORS */
+/* FONTS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: .3em;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  /* Tamaño del scroll en vertical */
+  height: 8px;
+  /* Tamaño del scroll en horizontal */
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+body::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+body::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+div,
+section {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container-principal {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.container-principal .openMenuBtn {
+  display: none;
+}
+
+.container-principal .menu {
+  width: 300px;
+  background: #0A0A0A;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.container-principal .menu .brand {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-principal .menu .brand img {
+  width: 50%;
+}
+
+.container-principal .menu .brand h1 {
+  margin-top: -30px;
+  font-family: "Nunito", sans-serif;
+  color: #FFFFFF;
+  font-size: 2.3em;
+}
+
+.container-principal .menu .dev-notes {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  text-decoration: none;
+  color: #858585;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.container-principal .menu .dev-notes:hover {
+  color: #C2C2C2;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.container-principal .menu .nav {
+  width: 100%;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.container-principal .menu .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-top: 1px solid white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.container-principal .menu .nav ul li {
+  list-style: none;
+  padding: 5px;
+  margin: 5px 0;
+  font-size: 1.5em;
+  border-radius: 5px;
+  font-family: "Nunito", sans-serif;
+}
+
+.container-principal .menu .nav ul li a {
+  color: #C2C2C2;
+  text-decoration: none;
+  display: block;
+}
+
+.container-principal .menu .nav ul li a:hover {
+  color: #E0E0E0;
+}
+
+.container-principal .menu .nav ul li.active {
+  background: #191919;
+}
+
+.container-principal .menu .nav ul li.active a {
+  color: #FFFFFF;
+}
+
+.container-principal .c-cprincipal {
+  width: calc(100% - 300px);
+  height: 100%;
+  position: relative;
+  background: #191919;
+}
+
+.container-principal .c-cprincipal .dev-hello {
+  color: #0A0A0A;
+  padding: 20px;
+  background: #FFFFFF;
+  font-size: 1.8em;
+}
+
+.container-principal .c-cprincipal .dev-info {
+  color: #191919;
+  background: #FFFFFF;
+  padding: 20px;
+}
+
+.container-principal .c-cprincipal .dev-info > p {
+  font-size: 1.3em;
+}
+
+.container-principal .c-cprincipal .dev-info > h2 {
+  font-size: 1.6em;
+  margin-bottom: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.container-principal .c-cprincipal .dev-info .sparkles {
+  position: absolute;
+  width: 180px;
+}
+
+.container-principal .c-cprincipal .dev-info .sparkles-txt {
+  letter-spacing: 5px;
+  font-weight: 700;
+}
+
+.container-principal .c-cprincipal .dev-info .author-txt {
+  background: #191919;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.container-principal .c-cprincipal .dev-info .author-txt:hover {
+  background: #0A0A0A;
+  padding: 12px 20px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container-principal .c-cprincipal .container-profile {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.container-principal .c-cprincipal .container-profile .styled-profile {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  margin-bottom: 3em;
+  background: #5769e7;
+}
+
+.container-principal .c-cprincipal .container-profile .styled-profile-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.container-principal .c-cprincipal .container-profile .styled-profile-bg img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container-principal .c-cprincipal .container-profile .styled-profile-bg img:hover {
+  opacity: 1;
+}
+
+.container-principal .c-cprincipal .container-profile .styled-profile::after {
+  content: "";
+  width: 200%;
+  height: 8px;
+  background: #0A0A0A;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: 1;
+}
+
+.container-principal .c-cprincipal .container-profile .styled-profile .icon-profile {
+  width: 150px;
+  height: 150px;
+  background: #0A0A0A;
+  position: absolute;
+  bottom: -30px;
+  border-radius: 50%;
+  border: 8px solid #0A0A0A;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.container-principal .c-cprincipal .container-profile .styled-profile .info-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.container-principal .c-cprincipal .container-profile .styled-profile .info-profile .name-profile {
+  margin-left: 160px;
+  font-size: 2em;
+  font-family: "Montserrat", sans-serif;
+  z-index: 2;
+  color: #FFFFFF;
+}
+
+.container-principal .c-cprincipal .container-profile .styled-profile .info-profile .social-profile {
+  position: absolute;
+  top: 0;
+  right: 80px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+.container-principal .c-cprincipal .container-profile .styled-profile .info-profile .social-profile a {
+  color: #C2C2C2;
+  font-size: 1.3em;
+  margin: 0 5px;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.container-principal .c-cprincipal .container-profile .styled-profile .info-profile .social-profile a:hover {
+  color: #FFFFFF;
+}
+
+.container-principal .c-cprincipal .container-profile .content-options {
+  width: calc(100% - 20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: 0 10px;
+  padding: 10px;
+  background: #0A0A0A;
+  border-radius: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-principal .c-cprincipal .container-profile .content-options-ordenar.Active #antiguoF,
+.container-principal .c-cprincipal .container-profile .content-options-ordenar.Active #antiguoInfo {
+  display: block !important;
+}
+
+.container-principal .c-cprincipal .container-profile .content-options-ordenar.Active #nuevoF,
+.container-principal .c-cprincipal .container-profile .content-options-ordenar.Active #nuevoInfo {
+  display: none !important;
+}
+
+.container-principal .c-cprincipal .container-profile .content-options-ordenar {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container-principal .c-cprincipal .container-profile .content-options-ordenar:hover {
+  background: #141414;
+}
+
+.container-principal .c-cprincipal .container-profile .content-options-ordenar:hover > i {
+  color: #FFFFFF;
+}
+
+.container-principal .c-cprincipal .container-profile .content-options-ordenar i {
+  color: #C2C2C2;
+  font-size: 1.3em;
+}
+
+.container-principal .c-cprincipal .container-profile .content-options-ordenar #antiguoF,
+.container-principal .c-cprincipal .container-profile .content-options-ordenar #antiguoInfo {
+  display: none;
+}
+
+.container-principal .c-cprincipal .container-profile .content-options-ordenar #nuevoF,
+.container-principal .c-cprincipal .container-profile .content-options-ordenar #nuevoInfo {
+  display: block;
+}
+
+.container-principal .c-cprincipal .container-profile .content-options-ordenar:hover .content-options-ordenar-info {
+  visibility: visible;
+  top: -50px;
+  opacity: 1;
+}
+
+.container-principal .c-cprincipal .container-profile .content-options-ordenar-info {
+  color: #FFFFFF;
+  background: #000000;
+  padding: 5px;
+  position: absolute;
+  min-width: 150px;
+  text-align: center;
+  border-radius: 5px;
+  top: -30px;
+  z-index: 5;
+  visibility: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
+  opacity: 0;
+}
+
+.container-principal .c-cprincipal .container-profile .content-options-ordenar-info::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  left: calc(50% - 5px);
+  background: #000000;
+}
+
+.container-principal .c-cprincipal .container-profile .content-profile.Active {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: column-reverse nowrap;
+          flex-flow: column-reverse nowrap;
+}
+
+.container-principal .c-cprincipal .container-profile .content-profile {
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.container-principal .c-cprincipal .container-profile .content-profile .content-music {
+  height: 80px;
+  width: 100%;
+  background: #141414;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: .5em;
+  border-radius: 5px;
+  overflow: hidden;
+  color: #A3A3A3;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.container-principal .c-cprincipal .container-profile .content-profile .content-music:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #FFFFFF;
+}
+
+.container-principal .c-cprincipal .container-profile .content-profile .content-music:hover .content-music-cover-img::before {
+  background: rgba(0, 0, 0, 0.8);
+  background-image: url(https://i.ibb.co/9vZjpSd/icon-letter.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.container-principal .c-cprincipal .container-profile .content-profile .content-music-cover-title {
+  width: calc(100% - 60px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.container-principal .c-cprincipal .container-profile .content-profile .content-music-cover-title .content-music-cover-img {
+  height: 100%;
+  width: auto;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 20px #000;
+          box-shadow: 0px 0px 20px #000;
+}
+
+.container-principal .c-cprincipal .container-profile .content-profile .content-music-cover-title .content-music-cover-img > img {
+  height: 100%;
+}
+
+.container-principal .c-cprincipal .container-profile .content-profile .content-music-cover-title .content-music-cover-img > img:hover {
+  opacity: 1;
+}
+
+.container-principal .c-cprincipal .container-profile .content-profile .content-music-cover-title .content-music-cover-img::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: .2s;
+  transition: .2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+.container-principal .c-cprincipal .container-profile .content-profile .content-music-cover-title > p {
+  margin-left: 10px;
+  font-size: 1.2em;
+}
+
+.container-principal .c-cprincipal .container-profile .content-profile .content-music-extras {
+  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-principal .c-cprincipal .container-profile .content-profile .content-music-extras > div {
+  margin: 5px;
+}
+
+.container-principal .c-cprincipal .container-nav.last-c {
+  padding-bottom: 260px;
+}
+
+.container-principal .c-cprincipal .container-nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  background: #141414;
+  padding: 20px;
+}
+
+.container-principal .c-cprincipal .container-nav .title-nav {
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 2em;
+}
+
+.container-principal .c-cprincipal .container-nav a.artist {
+  color: #E0E0E0;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.container-principal .c-cprincipal .container-nav a.artist:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #C2C2C2;
+}
+
+.container-principal .c-cprincipal .container-nav a.artist:hover img {
+  opacity: .6;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.container-principal .c-cprincipal .container-nav .artist {
+  height: 80px;
+  width: 235px;
+  margin: 5px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #191919;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.container-principal .c-cprincipal .container-nav .artist p {
+  margin: 0 10px;
+  display: block;
+}
+
+.container-principal .c-cprincipal .container-nav .artist__img {
+  height: 100%;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.container-principal .c-cprincipal .container-nav a.remix {
+  color: #E0E0E0;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.container-principal .c-cprincipal .container-nav a.remix:hover {
+  color: #C2C2C2;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container-principal .c-cprincipal .container-nav a.remix:hover img {
+  opacity: .6;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.container-principal .c-cprincipal .container-nav .remix {
+  min-height: 300px;
+  width: 238px;
+  margin: 0 4px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+  position: relative;
+}
+
+.container-principal .c-cprincipal .container-nav .remix:hover {
+  background: #191919;
+}
+
+.container-principal .c-cprincipal .container-nav .remix p {
+  margin: 5px 10px 40px;
+  display: block;
+}
+
+.container-principal .c-cprincipal .container-nav .remix__img {
+  height: 220px;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  width: calc(100% - 40px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.container-principal .c-cprincipal .container-nav .remix__img > img {
+  width: auto;
+  height: calc(100% + 40px);
+  margin-top: -20px;
+}
+
+.container-principal .c-cprincipal .container-nav .remix__author {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  color: #A3A3A3;
+  font-size: 18px;
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+}
+
+.container-principal .c-cprincipal .c-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(100% - 300px);
+  height: 203.19px;
+  position: fixed;
+  background: #191919;
+}
+
+.container-principal .c-cprincipal .c-container .music-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .album-cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.container-principal .c-cprincipal .c-container .music-container .album-cover img {
+  width: 100%;
+  height: auto;
+  -webkit-filter: blur(10px) opacity(0.2);
+          filter: blur(10px) opacity(0.2);
+  z-index: 1;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .album-cover .arrow {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  border: 0;
+  width: 5em;
+  right: 0;
+  height: 5em;
+  cursor: pointer;
+  bottom: 0;
+  z-index: 9;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .album-cover .arrow:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.container-principal .c-cprincipal .c-container .music-container .album-cover .arrow img {
+  display: block;
+  width: 20px;
+  margin: 0 auto;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .album-cover .arrow.left, .container-principal .c-cprincipal .c-container .music-container .album-cover .arrow.right {
+  background: transparent;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  color: #C2C2C2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 10px;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .album-cover .arrow.left:hover, .container-principal .c-cprincipal .c-container .music-container .album-cover .arrow.right:hover {
+  color: #FFFFFF;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .album-cover .arrow.left i, .container-principal .c-cprincipal .c-container .music-container .album-cover .arrow.right i {
+  font-size: 2em;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .album-cover .arrow.left {
+  left: 0;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .album-cover .arrow.right {
+  right: 0;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player__title {
+  margin: 0 0 .1em 0;
+  color: #FFFFFF;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player__author {
+  color: #C2C2C2;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player .music-bar {
+  background: #EFEFEF;
+  stroke-width: 1;
+  height: 8px;
+  width: 100%;
+  border-radius: 25px;
+  z-index: 2;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player .music-bar:hover {
+  cursor: pointer;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player .music-bar #length {
+  width: 0%;
+  background: #5769e7;
+  height: 100%;
+  -webkit-transition: width linear .2s;
+  transition: width linear .2s;
+  position: relative;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player .music-bar #length::after {
+  content: "";
+  position: absolute;
+  background: #5769e7;
+  top: -5px;
+  right: -5px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player .music-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  color: #FFFFFF;
+  width: 100%;
+  margin-top: -25px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player .music-time__last {
+  margin-left: 15px;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player .music-order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  z-index: 2;
+  width: 100%;
+  margin: -10px ​0 5px;
+  position: absolute;
+  top: 57%;
+  left: 5px;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player .music-order__shuffle, .container-principal .c-cprincipal .c-container .music-container .music-player .music-order__loop {
+  background: #FFFFFF;
+  width: calc(1.2em + 10px);
+  height: calc(1.2em + 10px);
+  margin: .3em 0;
+  opacity: .5;
+  padding: 5px;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player .music-order__shuffle.is-loop, .container-principal .c-cprincipal .c-container .music-container .music-player .music-order__loop.is-loop {
+  opacity: 1 !important;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player .music-order__shuffle.is-loop-one, .container-principal .c-cprincipal .c-container .music-container .music-player .music-order__loop.is-loop-one {
+  opacity: 1 !important;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player .music-order__shuffle__shuffle, .container-principal .c-cprincipal .c-container .music-container .music-player .music-order__loop__shuffle {
+  margin-left: auto;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player .music-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3em;
+  width: auto;
+  z-index: 2;
+  margin-top: 5px;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player .music-control__play {
+  font-size: 1.7em;
+  background: #191919;
+  line-height: 0;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player .music-control__play i {
+  color: #FFFFFF;
+  padding-left: 6px;
+  width: calc(60px - 6px);
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player .music-control__play:hover i {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player .music-control__play #pauseBtn {
+  padding: 0;
+  display: none;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player .music-control__backward, .container-principal .c-cprincipal .c-container .music-container .music-player .music-control__forward {
+  font-size: 2em;
+  margin: 0 10px;
+  color: #C2C2C2;
+  cursor: pointer;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player .music-control__backward:hover, .container-principal .c-cprincipal .c-container .music-container .music-player .music-control__forward:hover {
+  color: #FFFFFF;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 7px 10px;
+  position: relative;
+  cursor: pointer;
+  background: #191919;
+  color: #FFFFFF;
+  border: none;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  outline: none;
+  z-index: 2;
+  margin-top: 5px;
+}
+
+.container-principal .c-cprincipal .c-container .music-container .music-player select option {
+  background: #474747;
+  cursor: pointer;
+}
+
+@media all and (max-width: 1024px) {
+  .container-principal {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+  .container-principal .openMenuBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    top: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    background: #141414;
+    border-radius: 10px;
+    z-index: 10;
+  }
+  .container-principal .openMenuBtn i {
+    position: absolute;
+    font-size: 3em;
+    color: #858585;
+  }
+  .container-principal .openMenuBtn #closeMenu {
+    display: none;
+  }
+  .container-principal .openMenuBtn #openMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .container-principal .openMenuBtn.Active {
+    background: #FFFFFF;
+  }
+  .container-principal .openMenuBtn.Active #closeMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .container-principal .openMenuBtn.Active #openMenu {
+    display: none;
+  }
+  .container-principal .openMenuBtn.Active i {
+    color: #0A0A0A;
+  }
+  .container-principal .menu {
+    z-index: 9;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+    position: fixed;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .container-principal .menu.Active {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .container-principal .c-cprincipal {
+    width: 100%;
+  }
+  .container-principal .c-cprincipal .c-container {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 536px) {
+  .container-principal .c-cprincipal .container-nav a.remix {
+    width: 100%;
+    margin: 0 auto 15px;
+  }
+  .container-principal .c-cprincipal .container-nav a.remix .remix__img {
+    padding: 0;
+    height: auto;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container-principal .c-cprincipal .container-nav a.remix .remix__img > img {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+  .container-principal .c-cprincipal .container-nav .remix p {
+    font-size: 1.5em;
+  }
+  .container-principal .c-cprincipal .container-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  .container-principal .c-cprincipal .container-nav .artist {
+    width: 100%;
+  }
+  .container-principal .c-cprincipal .container-nav .artist__img {
+    width: 80px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container-principal .c-cprincipal .container-nav .artist__img > img {
+    height: 100%;
+    width: auto;
+  }
+}
+/*# sourceMappingURL=index.css.map */

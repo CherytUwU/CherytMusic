@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minumu-scale=1.0" />
+        <link rel="icon" href="./assets/icons/icon_original.png"/>
+
+        <!-- MetaTags -->
+        <meta
+          name=""
+          content=""
+        />
+        <!-- META ETIQUETAS VISTA PREVIA -->
+
+        <meta property="og:url" content="">
+        <meta property="og:site_name" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content=''>
+        <meta property="og:type" content="image">
+        <meta property="og:image" content="">
+        <meta property="og:image:width" content="1000">
+
+
+        <title>CherytMusic</title>
+        <link rel="stylesheet" href="./assets/css/index.css">
+        <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+        <script src="https://kit.fontawesome.com/158739efff.js" crossorigin="anonymous"></script>
+        <script src="./assets/js/main.js" ></script>
+    </head>
+    <body>
+        <div class="container-principal">
+            <div class="openMenuBtn">
+                <i class="fas fa-bars" id="openMenu"></i>
+                <i class="fas fa-times" id="closeMenu"></i>
+            </div>
+            <div class="menu">
+                <a href="index.html" style="text-decoration:none;" class="brand">
+                    <img src="https://i.ibb.co/9vZjpSd/icon-letter.png" />
+                    <h1>CherytMusic</h1>
+                </a>
+                <div class="nav">
+                    <ul>
+                        <li class="active"><a href=""><i class="fas fa-home"> </i> Inicio</i></a></li>
+                        <li><a href=""><i class="fas fa-compact-disc"></i> Bibliotecas</a></li>
+                    </ul>
+                </div>
+                <a class="dev-notes" href="">Notas de la Versión</a>
+            </div>
+
+            <div class="c-cprincipal">
+                <div class="dev-hello">
+                    <h1>¡Hola a todos!</h1>
+                </div>
+                <div class="dev-info">
+                    <h2>Esta vez tenemos una pequeña update, pero es tanto importante como comoda.</h2>
+                    <p>
+                        Algo que desde el inicio nos ha molestado, es no poder escoger exactamente la canción que queremos escuchar y tenemos que movernos de derecha a izquierda o visceversa hasta encontrarla<br>
+                        Bueno, pues eso se acabo ya que implementamos una solucion con codigo un poco pesado, en lo que creamos la opción <span class="sparkles"><img src="https://discord.com/assets/a188414ce83f2454b9d71a47c3d95909.svg"></span><span class="sparkles-txt">PERFECTA</span> <br>
+                        Espero les guste la nueva comodidad, y nos escuchamos en la proxima. <br><br>
+                        <a href="" class="author-txt">-Cheryt</a>
+                    </p>
+                </div>
+            </div>
+
+
+                <script>
+                    
+
+                    let openMenuBtn = document.querySelector('.openMenuBtn');
+                    let menu = document.querySelector('.menu');
+                    openMenuBtn.onclick = function(){
+                        menu.classList.toggle('Active');
+                        openMenuBtn.classList.toggle('Active');
+                    }
+
+                    let playBtn = document.getElementById('playBtn');
+                    let pauseBtn = document.getElementById('pauseBtn');
+                    let btnBg = document.querySelector('.music-control__play');
+
+                    playBtn.onclick = function(){
+                        playBtn.style.display = "none";
+                        pauseBtn.style.display = "flex";
+                        btnBg.style.backgroundColor = "#5769e7";
+                    }
+                    pauseBtn.onclick = function(){
+                        playBtn.style.display = "flex";
+                        pauseBtn.style.display = "none";
+                        btnBg.style.backgroundColor = "#292929";
+                    }
+
+                    let siguiente = document.getElementById('prev');
+                    let anterior = document.getElementById('next');
+
+                    siguiente.onclick = function(){
+                        playBtn.style.display = "flex";
+                        pauseBtn.style.display = "none";
+                        btnBg.style.backgroundColor = "#292929";
+                    }
+                    anterior.onclick = function(){
+                        playBtn.style.display = "flex";
+                        pauseBtn.style.display = "none";
+                        btnBg.style.backgroundColor = "#292929";
+                    }
+
+                    function cambiarVolumen(){
+                        var pista = document.getElementById('music1');
+                        var combo_volumen = document.getElementById('combo_volumen');
+                        combo_volumen.onchange = function(){
+                            var volumen = this.value;
+                            pista.volume = volumen;
+                        }
+                    }
+
+                    window.onload = function(){
+                        cambiarVolumen();
+                    }
+                    
+                </script>
+        </div>
+        <script src="./assets/js/index.js"></script>
+    </body>
+</html>

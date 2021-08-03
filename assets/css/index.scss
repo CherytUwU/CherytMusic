@@ -1,0 +1,1031 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$bg-1: #FFCDD2;
+$bg-2: #B2EBF2;
+$music-bar: #2196F3;
+$music-bar-bg: #EFEFEF;
+
+/* BLACK AND WHITE */
+$black: #000000;
+$black-1: #0A0A0A;
+$black-2: #141414;
+$black-3: #191919;
+$black-4: #474747;
+$black-5: #666666;
+
+$white-1: #FFFFFF;
+$white-2: #E0E0E0;
+$white-3: #C2C2C2;
+$white-4: #A3A3A3;
+$white-5: #858585;
+
+/* COLORS */
+$cyan: #03cfce;
+$red: #e93e51;
+$yellow: #fbf040;
+
+/* SOCIAL NETS COLORS */
+$facebook: #3b5998;
+$youtube: #FF0000;
+$twitter: #1DA1F2;
+$instagram: #C13584;
+$twitch: #6441a5;
+$tiktok: #FFFFFF;
+$tiktok-2: #EE1D52;
+$tiktok-3: #69C9D0;
+$tiktok-4: #010101;
+$discord: 	#5769e7;
+
+/* FONTS */
+$font-brand: 'Nunito', sans-serif;
+$font-user-t: 'Montserrat', sans-serif;
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+div{
+	box-sizing: border-box;
+}
+img{
+	width: 100%;
+	height: 100%;
+}
+p{
+	margin-top: 0;
+	margin-bottom: .3em;
+}
+body{
+	font-family: "Nunito", sans-serif;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	min-width: 100vw;
+	min-height: 100vh;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+body::-webkit-scrollbar-thumb {
+    background: #ccc;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+body::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+body::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+
+div, 
+section{
+	box-sizing: border-box;
+}
+.container-principal{
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+
+	.openMenuBtn{
+		display: none;
+	}
+
+	.menu{
+		width: 300px;
+		background: $black-1;
+		position: sticky;
+		top: 0;
+		height: 100vh;
+		white-space: nowrap;
+		overflow: hidden;
+		z-index: 1;
+
+		.brand{
+			width: 100%;
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: center;
+			align-items: center;
+
+			img{
+				width: 50%;
+			}
+			h1{
+				margin-top: -30px;
+				font-family: $font-brand;
+				color: $white-1;
+				font-size: 2.3em;
+			}
+		}
+
+		.dev-notes{
+			position: absolute;
+			bottom: 10px;
+			left: 10px;
+			text-decoration: none;
+			color: $white-5;
+			transition: .1s;
+
+			&:hover{
+				color: $white-3;
+				border-bottom: 1px solid rgba(255,255,255,.3);
+			}
+		}
+
+		.nav{
+			width: 100%;
+			padding: 10px 20px;
+			position: relative;
+
+			ul{
+				display: flex;
+				width: 100%;
+				border-top: 1px solid white;
+				flex-flow: column wrap;
+
+				li{
+					list-style: none;
+					padding: 5px;
+					margin: 5px 0;
+					font-size: 1.5em;
+					border-radius: 5px;
+					font-family: $font-brand;				
+					a{
+						color:$white-3;
+						text-decoration: none;
+						display: block;
+
+						&:hover{
+							color: $white-2;
+						}
+					}
+				}
+				li.active{
+					background: $black-3;
+					a{
+						color: $white-1;
+					}
+				}
+			}
+		}
+	}
+
+	.c-cprincipal{
+		width: calc(100% - 300px);
+		height: 100%;
+		position: relative;
+		background: $black-3;
+
+		.dev-hello{
+			color: $black-1;
+			padding: 20px;
+			background: $white-1;
+			font-size: 1.8em;
+		}
+
+		.dev-info{
+			color: $black-3;
+			background: $white-1;
+			padding: 20px;
+			
+			> p{
+				font-size: 1.3em;
+			}
+
+			> h2 {
+				font-size: 1.6em;
+				margin-bottom: 5px;
+				border-bottom: 1px solid rgba(0,0,0,.3);
+			}
+
+			.sparkles{
+				position: absolute;
+				width: 180px;
+			}
+
+			.sparkles-txt{
+				letter-spacing: 5px;
+				font-weight: 700;
+			}
+
+			.author-txt{
+				background: $black-3;
+				color: $white-1;
+				padding: 10px 20px;
+				border-radius: 5px;
+				text-decoration: none;
+				transition: .2s;
+
+				&:hover{
+					background: $black-1;
+					padding: 12px 20px;
+					box-shadow: 0 5px 10px rgba(0,0,0,.5);
+				}
+			}
+		}
+
+		.container-profile{
+			width: 100%;
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+
+			.styled-profile{
+				position: relative;
+				width: 100%;
+				height: 200px;
+				padding: 10px;
+				margin-bottom: 3em;
+				background: $discord;
+
+				&-bg{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					overflow: hidden;
+					z-index: 0;
+
+					& img{
+						object-fit: cover;
+						&:hover{
+							opacity: 1;
+						}
+					}
+				}
+				
+				&::after{
+					content: "";
+					width: 200%;
+					height: 8px;
+					background: $black-1;
+					position: absolute;
+					left: 0px;
+					bottom: 0px;
+					z-index: 1;
+				}
+
+				.icon-profile{
+					width: 150px;
+					height: 150px;
+					background: $black-1;
+					position: absolute;
+					bottom: -30px;
+					border-radius: 50%;
+					border: 8px solid $black-1;
+					overflow: hidden;
+					z-index: 2;
+				}
+
+				.info-profile{
+					display: flex;
+					flex-flow: row wrap;
+					justify-content: baseline;
+					align-items: flex-end;
+					width: 100%;
+					height: 100%;
+
+					.name-profile{
+						margin-left: 160px;
+						font-size: 2em;
+						font-family: $font-user-t;
+						z-index: 2;
+						color: $white-1;
+					}
+
+					.social-profile{
+						position: absolute;
+						top: 0;
+						right: 80px;
+						background: rgba(0,0,0,.5);
+						padding: 10px;
+
+						a{
+							color: $white-3;
+							font-size: 1.3em;
+							margin: 0 5px;
+							transition: .1s;
+
+							&:hover{
+								color: $white-1;
+							}
+						}
+					}
+				}
+			}
+
+			.content-options{
+				width: calc(100% - 20px);
+				display: flex;
+				flex-flow: row wrap;
+				margin: 0 10px;
+				padding: 10px;
+				background: $black-1;
+				border-radius: 5px;
+				align-items: center;
+
+				&-ordenar.Active{
+					#antiguoF,
+					#antiguoInfo{
+						display: block !important;
+					}
+					#nuevoF,
+					#nuevoInfo{
+						display: none !important;
+					}
+				}
+
+				&-ordenar{
+					width: 30px;
+					height: 30px;
+					position: relative;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background: rgba(255,255,255,.02);
+					border-radius: 5px;
+					cursor: pointer;
+
+					&:hover{
+						background: $black-2;
+					}
+					
+
+					&:hover > i{
+						color: $white-1;
+					}
+
+					i{
+						color: $white-3;
+						font-size: 1.3em;
+					}
+
+					#antiguoF,
+					#antiguoInfo{
+						display: none;
+					}
+
+					#nuevoF,
+					#nuevoInfo{
+						display: block;
+					}
+
+					&:hover .content-options-ordenar-info{
+						visibility: visible;
+						top: -50px;
+						opacity: 1;
+					}
+
+					&-info{
+						color: $white-1;
+						background: $black;
+						padding: 5px;
+						position: absolute;
+						min-width: 150px;
+						text-align: center;
+						border-radius: 5px;
+						top: -30px;
+						z-index: 5;
+						visibility: hidden;
+						transition: .3s;
+						opacity: 0;
+						
+						&::before{
+							content: "";
+							position: absolute;
+							bottom: -4px;
+							transform: rotate(45deg);
+							width: 10px;
+							height: 10px;
+							left: calc(50% - 5px);
+							background: $black;
+						}
+					}
+				}
+			}
+
+			.content-profile.Active{
+				flex-flow: column-reverse nowrap;
+			}
+
+			.content-profile{
+				width: 100%;
+				padding: 10px;
+				padding-bottom: 260px;
+				display: flex;
+				flex-flow: column nowrap;
+
+				.content-music{
+					height: 80px;
+					width: 100%;
+					background: $black-2;
+					display: flex;
+					flex-flow: row nowrap;
+					border: 1px solid rgba(255,255,255,.05);
+					margin-bottom: .5em;
+					border-radius: 5px;
+					overflow: hidden;
+					color: $white-4;
+					justify-content: space-between;
+					cursor: pointer;
+					transition: .2s;
+
+					&:hover{
+						background: rgba(255,255,255,.05);
+						color: $white-1;
+					}
+
+					&:hover .content-music-cover-img::before{
+						background: rgba(0,0,0,0.8);
+						background-image: url(https://i.ibb.co/9vZjpSd/icon-letter.png);
+						background-position: center;
+						background-size: cover;
+						background-repeat: no-repeat;
+						visibility: visible;
+						transform: scale(1);
+					}
+				
+					&-cover-title{
+						width: calc(100% - 60px);
+						display: flex;
+						flex-flow: row nowrap;
+						align-items: center;
+						height: 100%;
+						
+						.content-music-cover-img{
+							height: 100%;
+							width: auto;
+							position: relative;
+							box-shadow: 0px 0px 20px #000;
+						
+							> img{
+								height: 100%;
+
+								&:hover{
+									opacity: 1;
+								}
+							}
+
+							&::before{
+								content: "";
+								width: 100%;
+								height: 100%;
+								position: absolute;
+								top: 0;
+								left: 0;
+								transition: .2s;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								visibility: hidden;
+								transform: scale(.7);
+							}
+						}
+
+						> p {
+							margin-left: 10px;
+							font-size: 1.2em;
+						}
+					}
+
+					&-extras{
+						width: 60px;
+						display: flex;
+						height: 100%;
+						justify-content: center;
+						align-items: center;
+
+						> div{
+							margin: 5px;
+						}
+					}
+				}
+			}
+		}
+
+		.container-nav.last-c{
+			padding-bottom: 260px;
+		}
+
+		.container-nav{
+			width: 100%;
+			display: flex;
+			flex-flow: row wrap;
+			background: $black-2;
+			padding: 20px;
+
+			.title-nav{
+				width: 100%;
+				color: $white-1;
+				font-size: 2em;
+			}
+
+			a.artist{
+				color: $white-2;
+				text-decoration: none;
+				border: 1px solid rgba(255,255,255,.05);	
+				transition: .2s;
+
+				&:hover{
+					background: rgba(255,255,255,.2);
+					color: $white-3;
+				}
+
+				&:hover img{
+					opacity: .6;
+					transition: .2s;
+				}
+			}
+
+			.artist{
+				height: 80px;
+				width: 235px;
+				margin: 5px;
+				margin-bottom: 10px;
+				display: flex;
+				flex-flow: row nowrap;
+				align-items: center;
+				background: $black-3;
+				border-radius: 8px;
+				overflow: hidden;
+
+				p{
+					margin: 0 10px;
+					display: block;
+					
+				}
+
+				&__img{
+					height: 100%;
+					box-shadow: 0px 0px 20px rgba(0,0,0,.5);
+				}
+				
+			}
+
+			a.remix{
+				color: $white-2;
+				text-decoration: none;
+				border: 1px solid rgba(255,255,255,.02);	
+				transition: .2s;
+
+				&:hover{
+					color: $white-3;
+					border: 1px solid rgba(255,255,255,.05);	
+				}
+
+				&:hover img{
+					opacity: .6;
+					transition: .2s;
+				}
+			}
+
+			.remix{
+				min-height: 300px;
+				width: 238px;
+				margin: 0 4px;
+				margin-bottom: 10px;
+				display: flex;
+				flex-flow: column nowrap;
+				align-items: center;
+				border-radius: 8px;
+				position: relative;
+
+				&:hover{
+					background: $black-3;
+				}
+
+				p{
+					margin: 5px 10px 40px;
+					display: block;
+					
+				}
+
+				&__img{
+					height: 220px;
+					padding: 20px;
+					box-shadow: 0px 0px 20px rgba(0,0,0,.5);
+					overflow: hidden;
+					width: calc(100% - 40px);
+					display: flex;
+					justify-content: center;
+					border-radius: 5px;
+					margin-top: 5px;
+
+					> img {
+						width: auto;
+						height: calc(100% + 40px);
+						margin-top: -20px;
+					}
+				}
+
+				
+			
+				&__author{
+					position: absolute;
+					bottom: 0;
+					left: 10px;
+					color: $white-4;
+					font-size: 18px;
+					margin: 0 0 10px !important;
+					padding: 0 !important;
+				}
+				
+			}
+		}
+	
+		.c-container{
+			display: flex;
+			bottom: 0;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: center;
+			width: calc(100% - 300px);
+			height: 203.19px;
+			position: fixed;
+			background: $black-3;
+		
+			.music-container{
+				position: relative;
+				display: flex;
+				box-shadow: 1px 1px 5px 0 rgba(0,0,0,.3);
+				height: 100%;
+				width: 100%;
+		
+				.album-cover{
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					bottom: 0;
+					box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+		
+					img{
+						width: 100%;
+						height: auto;
+						filter: blur(10px) opacity(.2);
+						z-index: 1;
+					}
+		
+					.arrow{
+						position: absolute;
+						background: rgba(255,255,255,0.3);
+						border: 0;
+						width: 5em;
+						right: 0;
+						height: 5em;
+						cursor: pointer;
+						bottom: 0;
+						z-index: 9;
+		
+						&:hover{
+							background: rgba(255,255,255,0.5);
+						}
+		
+						img{
+							display: block;
+							width: 20px;
+							margin: 0 auto;
+						}
+	
+						&.left,
+						&.right{
+							background: transparent;
+							bottom: 0;
+							width: 60px;
+							height: 60px;
+							color: $white-3;
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							align-items: center;
+							margin: 0 10px;
+	
+							&:hover{
+								color: $white-1;
+							}
+	
+							i{
+								font-size: 2em;
+							}
+						}
+		
+						&.left{
+							left: 0;
+						}
+						&.right{
+							right: 0;
+						}
+					}
+				}
+		
+				.music-player{
+					display: flex;
+					position: absolute;
+					bottom: 0;
+					flex-flow: column wrap;
+					justify-content: center;
+					align-items: center;
+					padding: 1em;
+					text-align: center;
+					width: 100%;
+					border-top: 1px solid rgba(255,255,255,0.2);
+					z-index: 2;
+		
+					&__title{
+						margin: 0 0 .1em 0;
+						color: $white-1;
+					}
+		
+					&__author{
+						color: $white-3;
+					}
+		
+					.music-bar{
+						background: $music-bar-bg;
+						stroke-width:  1;
+						height: 8px;
+						width: 100%;
+						border-radius: 25px;
+						z-index: 2;
+		
+						&:hover{
+							cursor: pointer;
+						}
+		
+						#length{
+							width: 0%;
+							background: $discord;
+							height: 100%;
+							transition: width linear .2s;
+							position: relative;
+	
+							&::after{
+								content: "";
+								position: absolute;
+								background: $discord;
+								top: -5px;
+								right: -5px;
+								border-radius: 50%;
+								width: 20px;
+								height: 20px;
+							}
+						}
+					}
+		
+					.music-time{
+						display: flex;
+						flex-flow: row wrap;
+						color: $white-1;
+						width: 100%;
+						margin-top: -25px;
+						justify-content: space-between;
+		
+						&__last{
+							margin-left: 15px;
+						}
+					}
+		
+					.music-order{
+						display: flex;
+						flex-flow: row wrap;
+						z-index: 2;
+						width: 100%;
+						margin: -10px ​0 5px;
+						position: absolute;
+						top: 57%;
+    					left: 5px;
+		
+						&__shuffle,
+						&__loop{
+							background: $white-1;
+							width: calc(1.2em + 10px);
+							height: calc(1.2em + 10px);
+							margin: .3em 0;
+							opacity: .5;
+							padding: 5px;
+		
+							&.is-loop{
+								opacity: 1 !important;
+							}
+							&.is-loop-one{
+								opacity: 1 !important;
+							}
+						&__shuffle{
+							margin-left: auto;
+						}
+						}
+					}
+		
+					.music-control{
+						display: flex;
+						flex-flow: row;
+						justify-content: center;
+						align-items: center;
+						height: 3em;
+						width: auto;
+						z-index: 2;
+						margin-top: 5px;
+		
+						&__play{
+							font-size: 1.7em;
+							background: $black-3;
+							line-height: 0;
+							padding: 5px;
+							width:50px;
+							height:50px;
+							border-radius: 50%;
+							position: relative;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							cursor: pointer;
+	
+							i{
+								color: $white-1;
+								padding-left: 6px;
+								width: calc(60px - 6px);
+								height: 60px;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+							}
+	
+							&:hover i{
+								transform: scale(1.1);
+							}
+	
+							#pauseBtn{
+								padding: 0;
+								display: none;
+							}
+						}
+						&__backward,
+						&__forward{
+							font-size: 2em;
+							margin: 0 10px;
+							color: $white-3;
+							cursor: pointer;
+	
+							&:hover{
+								color:$white-1;
+							}
+						}
+					}
+
+					
+					select {
+						appearance: none;
+						padding: 7px 10px;
+						position: relative;
+						cursor: pointer;
+						background: $black-3;
+						color: $white-1;
+						border: none;
+						font-family: $font-brand;
+						font-size: 16px;
+						outline: none;
+						z-index: 2;
+						margin-top: 5px;
+
+						option{
+							background: $black-4;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+
+		}
+	}
+}
+
+@media all and (max-width: 1024px){
+	.container-principal{
+		flex-flow: row;
+
+		.openMenuBtn{
+			display: flex;
+			position: fixed;
+			top: 10px;
+			justify-content: center;
+			align-items: center;
+			right: 10px;
+			width: 60px;
+			height: 60px;
+			background: $black-2;
+			border-radius: 10px;
+			z-index: 10;
+
+			i{
+				position: absolute;
+				font-size: 3em;
+				color: $white-5;
+			}
+
+			#closeMenu{
+				display: none;
+			}
+
+			#openMenu{
+				display: flex;
+			}
+		}
+
+		.openMenuBtn.Active{
+			background: $white-1;
+
+			#closeMenu{
+				display: flex;
+			}
+
+			#openMenu{
+				display: none;
+			}
+
+			i{
+				color: $black-1;
+			}
+		}
+
+		.menu{
+			z-index: 9;
+			transform: translateX(-300px);
+			position: fixed;
+			transition: .3s;
+		}
+
+		.menu.Active{
+			transform: translateX(0);
+		}
+
+		.c-cprincipal{
+			width: 100%;
+
+			.c-container{
+				width: 100%;
+			}
+		}
+	}
+
+}
+
+@media all and  (max-width: 536px){
+	.container-principal .c-cprincipal .container-nav a.remix{
+		width: 100%;
+		margin: 0 auto 15px;
+
+		.remix{
+
+			&__img{
+				padding: 0;
+				height: auto;
+				margin: 0;
+				width: 100%;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+
+				> img {
+					width: 100%;
+					height: auto;
+					margin-top: 0;
+				}
+			}
+		}
+	}
+
+	.container-principal .c-cprincipal .container-nav .remix p{
+		font-size: 1.5em;
+	}
+
+	.container-principal .c-cprincipal .container-nav{
+		flex-flow: column nowrap;
+
+		.artist{
+			width: 100%;
+		}
+
+		.artist__img{
+			width: 80px;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+
+			> img {
+				height: 100%;
+				width: auto;
+			}
+		}
+	}
+}
